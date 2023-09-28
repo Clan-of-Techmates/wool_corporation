@@ -1,0 +1,130 @@
+
+       
+body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+       }
+
+       header {
+           background-image: url('https://img.franchiseindia.com/categories/industrial-fabrics-textile.jpg');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           height: 200px; /* Increased the header height */
+           text-align: center;
+           margin: 0;
+           padding: 0;
+           position: relative; /* Added relative positioning to the header */
+       }
+       .menu-icon {
+           display: none;
+           cursor: pointer;
+           position: absolute;
+           top: 10px;
+           right: 10px;
+           z-index: 4;
+       }
+
+       .menu-icon div {
+           width: 30px;
+           height: 3px;
+           background-color: #fff;
+           margin: 6px 0;
+           transition: 0.4s;
+       }
+        @media screen and (max-width: 768px) {
+           .menu-icon {
+               display: block; /* Show the hamburger icon */
+           }
+
+           nav ul {
+               display: none; /* Hide the navigation menu items */
+               position: absolute;
+               top: 60px;
+               left: 0;
+               width: 100%;
+               flex-direction: column;
+               background-color: rgba(0, 0, 0, 0.7);
+           }
+
+           nav ul.active {
+               display: flex; /* Show the navigation menu items */
+           }
+
+           nav li {
+               margin: 10px 0;
+           }
+
+           /* Rotate hamburger icon into a close icon when menu is active */
+           .menu-icon.active div:nth-child(1) {
+               transform: rotate(-45deg) translate(-5px, 6px);
+           }
+           .menu-icon.active div:nth-child(2) {
+               opacity: 0;
+           }
+           .menu-icon.active div:nth-child(3) {
+               transform: rotate(45deg) translate(-5px, -6px);
+           }
+       }
+
+       /* Style for the navigation menu */
+nav {
+ background-color: rgba(0, 0, 0, 0.7);
+ color: #fff;
+ text-align: center;
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+nav ul {
+ list-style-type: none;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+
+nav li {
+ font-size: 1.5em;
+ margin: 0 10px; /* Reduced horizontal margin */
+ position: relative; /* Added relative positioning */
+}
+
+/* Style for the subfields in the menu */
+nav li ul {
+ z-index: 3;
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ display: none;
+ width: max-content; /* Adjusted width for responsiveness */
+}
+
+nav li:hover ul {
+ z-index: 3;
+ display: block;
+}
+
+nav li ul li {
+ z-index: 3;
+ display: block;
+ margin: 0;
+ padding: 10px 15px;
+}
+
+/* Style for links in the menu */
+nav a {
+ color: #fff;
+ text-decoration: none;
+}
+
+/* Style for links in the subfields */
+nav li ul a {
+ color: #fff;
+ text-decoration: none;
+}

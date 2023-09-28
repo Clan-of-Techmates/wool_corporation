@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="nav.css">
+    <script>
+           function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('nav ul');
+
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">TRACKING</a>
+                        <ul>
+                            <li><a href="/register">Register</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="#">Product 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MARKET PLACE</a>
+                        <ul>
+                            <li><a href="#">BUYER</a></li>
+                            <li><a href="#">SELLER</a></li>
+                            <li><a href="#">FARMER</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">EDUCATION</a>
+                        <ul>
+                            <li><a href="/workshop">WORKSHOP</a></li>
+                            <li><a href="/training">TRAINING</a></li>
+                            <li><a href="#">WIKI</a></li>
+                            <li><a href="#">TOOLS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/logistic">LOGISTICS SUPPORT</a></li>
+                    <li><a href="#">VISUALIZATION</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+       
+        </div>
+       
+    </header>
+    <h1> Before</h1>
+    <%- body %>
+    <h1>After</h1>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    
+</body>
+</html>
