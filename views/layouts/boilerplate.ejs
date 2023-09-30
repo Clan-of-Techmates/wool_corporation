@@ -5,21 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>partio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="nav.css">
-    <script>
-           function toggleMenu() {
-            const menuIcon = document.querySelector('.menu-icon');
-            const navMenu = document.querySelector('nav ul');
+  <!--not working thats why i'm use css here okay ankit and roopesh 
+    <link rel="stylesheet" href="nav.css">-->
 
-            menuIcon.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        }
-    </script>
+ 
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+       }
+
+       header {
+           /* background-image: url('https://ibb.co/GcSLL78'); */
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           height: 200px; /* Increased the header height */
+          text-align: center;
+           margin: 0;
+           padding: 0;
+           position: relative; /* Added relative positioning to the header*/ 
+       }
+     
+              /* Style for the navigation menu */
+
+
+nav {
+ background-color: rgba(0, 0, 0, 0.7);
+ color: #fff;
+ text-align: center;
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+nav ul {
+ list-style-type: none;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+
+nav li {
+ font-size: 1.5em;
+ margin: 0 10px; /* Reduced horizontal margin */
+ position: relative; /* Added relative positioning */
+}
+
+/* Style for the subfields in the menu */
+nav li ul {
+ z-index: 3;
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ display: none;
+ width: max-content; /* Adjusted width for responsiveness */
+}
+
+nav li:hover ul {
+ z-index: 3;
+ display: block;
+}
+
+nav li ul li {
+ z-index: 3;
+ display: block;
+ margin: 0;
+ padding: 10px 15px;
+}
+
+/* Style for links in the menu */
+nav a {
+ color: #fff;
+ text-decoration: none;
+}
+
+/* Style for links in the subfields */
+nav li ul a {
+ color: #fff;
+ text-decoration: none;
+}
+    </style>
 
 </head>
 <body>
     <header>
+      
+<a href="https://ibb.co/hDbxnj9"><img src="https://i.ibb.co/MMryj4S/carousel-image1.png" alt="carousel-image1" height="200px" width="1600px"></a>
         <div class="menu-icon" onclick="toggleMenu()">
+           
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -54,13 +133,14 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-       
+
         </div>
        
     </header>
-    <h1> Before</h1>
+
     <%- body %>
-    <h1>After</h1>
+   
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     
